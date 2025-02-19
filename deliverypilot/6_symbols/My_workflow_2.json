@@ -1,0 +1,35 @@
+{
+  "name": "My workflow 2",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {},
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "811e4dca-20b1-43ab-8687-1c8cdd0b3ad1",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {},
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a82209e1-04c4-452e-ae1f-76c12e652044",
+  "meta": {
+    "instanceId": "35437a6368ccd9d197175ea555af04c50b4cc47afca19bafe1222554f0cbd6a9"
+  },
+  "id": "LDiv3gBOyZPgAd9y",
+  "tags": []
+}
