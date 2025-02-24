@@ -1,0 +1,810 @@
+
+<!-- saved from url=(0091)https://mail.google.com/mail/u/0/?ik=3c5f8fcdec&view=om&permmsgid=msg-f:1799203613002001223 -->
+<html data-qb-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Original message</title><link rel="shortcut icon" href="https://www.google.com/a/cpanel/pexabo.com/images/favicon.ico" type="image/x-icon"><style>
+.trail {
+  position: absolute;
+  height: 5px;
+  background: #ff0000;
+  pointer-events: none;
+  z-index: 10000000;
+  transform-origin: left center;
+}
+
+.fading{
+  animation: fade 0.5s ease-out forwards;
+}
+
+.highlited {
+  animation: fade 4s ease-out forwards !important;
+}
+
+.dot {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #ff0000;
+  pointer-events: none;
+  z-index: 1000000;
+  transform: translate(-50%, -50%);
+  animation: fade 1s ease-out forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+</style><style type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+</style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style><style></style></head><body><div class="page-wrapper"><div class="top-area"><h3 class="page_title">Original message</h3><div id="butterbar-container"><div id="butterbar-wrap"><div class="jfk-butterBar jfk-butterBar-info" aria-live="assertive" aria-atomic="true"><div id="status-messages"><div id="copy-error" style="display:none;">There was a problem while copying the raw header and body.</div><div id="copy-success" style="display:none;"><span class="clipboard-icon"></span>Copied to clipboard.</div></div></div></div></div><table><tbody><tr><th>Message ID</th><td class="message_id">&lt;DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2@DB9PR08MB9828.eurprd08.prod.outlook.com&gt;</td></tr><tr><th>Created on:</th><td>16 May 2024 at 10:11 (Delivered after 10 seconds)</td></tr><tr><th>From:</th><td>Pallavi Bachchhav &lt;Pallavi.Bachchhav@theknowledgeacademy.com&gt;</td></tr><tr><th>To:</th><td class="toRecipientsSelector">"info@pexabo.com" &lt;info@pexabo.com&gt;</td></tr><tr><th>Subject:</th><td>The knowledge Academy - Completion of the onboarding process of a freelance trainer.</td></tr><tr><th>SPF:</th><td><span class="authresult">PASS</span> with IP 2a01:111:f403:2607:0:0:0:701 <a href="https://support.google.com/a?p=show_original&amp;hl=en" target="_blank" class="learn-more-link">Learn more</a></td></tr><tr><th>DKIM:</th><td><span class="authresult">'PASS'</span> with domain theknowledgeacademy.com <a href="https://support.google.com/a?p=show_original&amp;hl=en" target="_blank" class="learn-more-link">Learn more</a></td></tr><tr><th>DMARC:</th><td><span class="authresult">'PASS'</span> <a href="https://support.google.com/a?p=show_original&amp;hl=en" target="_blank" class="learn-more-link">Learn more</a></td></tr></tbody></table><style type="text/css" nonce="">
+body{font-family:"Arial","Helvetica",sans-serif!important;font-size:14px;margin:0}.page-wrapper{display:table;height:auto;width:100%}.page_title{font-size:20px;font-weight:normal;padding:20px 11% 0 11%}.message_id{color:#2e7d32}.top-area{background-color:#fff;display:table-row}table{border-collapse:collapse;margin:0 auto;width:80%}td,th{border-bottom:solid thin #e0e0e0;border-top:solid thin #e0e0e0;font-weight:normal}td{border-right:solid thin #e0e0e0;padding:8px}th{border-left:solid thin #e0e0e0;padding:12px 20px;text-align:left}.download-buttons,.learn-more-link{color:#15c;cursor:pointer;padding-left:5px;text-decoration:none}.authresult{text-transform:uppercase}.download-buttons{display:inline-block;font-size:14px;padding:20px}.more-actions{display:table;padding-bottom:25px;width:100%}.download-links{display:table-cell;width:39%}.header-body-button{display:table-cell;text-align:right;width:39%}#butterbar-wrap{display:inline-block}#butterbar-container{left:auto;position:absolute;text-align:center;top:18px;width:100%}.clipboard-icon{background-image:url(//ssl.gstatic.com/images/icons/material/system/1x/content_paste_black_24dp.png);background-position:center;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px;padding:8px 20px 8px 8px}.copy-header-body-button.jfk-button.jfk-button-action{display:inline-block;padding:4px 6px;text-decoration:none}#copy-header-body-button{margin:10px}.spacing{display:table-cell;width:11%}.bottom-area{background-color:#eee;display:table-row;height:100%}.raw_message{border-top:solid thin #bdbdbd;display:table-cell;height:100%}.raw_message_text{background-color:#fff;border:solid thin #e0e0e0;border-radius:5px;color:#616161;height:100%;margin:25px 10%;padding:40px 30px;white-space:pre-wrap;word-break:break-word;word-wrap:break-word}.truncate_message{color:#d32f2f;padding:10px;text-align:center}.jfk-butterBar{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-box-shadow:0px 2px 4px rgba(0,0,0,.2);-moz-box-shadow:0px 2px 4px rgba(0,0,0,.2);box-shadow:0px 2px 4px rgba(0,0,0,.2);-webkit-transition:all 0s linear 1s,opacity 1s;-moz-transition:all 0s linear 1s,opacity 1s;-o-transition:all 0s linear 1s,opacity 1s;transition:all 0s linear 1s,opacity 1s;border-style:solid;border-width:0;font-size:11px;height:0;opacity:0;visibility:hidden;overflow:hidden;padding:0;text-align:center}.jfk-butterBar-info{background-color:#f9edbe;border-color:#f0c36d;color:#333}.jfk-butterBar-error{background-color:#484848;border-color:#202020;color:#fff}.jfk-butterBar-promo{background-color:#d6e9f8;border-color:#4d90f0;color:#333}.jfk-butterBar-warning{background-color:#dd4b39;border-color:#602019;color:#fff}.jfk-butterBar-shown{-webkit-transition:opacity 0.218s;-moz-transition:opacity 0.218s;-o-transition:opacity 0.218s;transition:opacity 0.218s;border-width:1px;min-height:14px;height:auto;opacity:1;visibility:visible;padding:6px 16px}.jfk-butterBar-mini.jfk-butterBar-shown{padding:2px 16px}.goog-inline-block{position:relative;display:-moz-inline-box;display:inline-block}* html .goog-inline-block{display:inline}*:first-child+html .goog-inline-block{display:inline}.jfk-button{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:default;font-size:11px;font-weight:bold;text-align:center;white-space:nowrap;margin-right:16px;height:27px;line-height:27px;min-width:54px;outline:0;padding:0 8px}.jfk-button-hover{-webkit-box-shadow:0 1px 1px rgba(0,0,0,.1);-moz-box-shadow:0 1px 1px rgba(0,0,0,.1);box-shadow:0 1px 1px rgba(0,0,0,.1)}.jfk-button-selected{-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);box-shadow:inset 0 1px 2px rgba(0,0,0,.1)}.jfk-button .jfk-button-img{margin-top:-3px;vertical-align:middle}.jfk-button-label{margin-left:5px}.jfk-button-narrow{min-width:34px;padding:0}.jfk-button-collapse-left,.jfk-button-collapse-right{z-index:1}.jfk-button-collapse-left.jfk-button-disabled{z-index:0}.jfk-button-checked.jfk-button-collapse-left,.jfk-button-checked.jfk-button-collapse-right{z-index:2}.jfk-button-collapse-left:focus,.jfk-button-collapse-right:focus,.jfk-button-hover.jfk-button-collapse-left,.jfk-button-hover.jfk-button-collapse-right{z-index:3}.jfk-button-collapse-left{margin-left:-1px;-moz-border-radius-bottomleft:0;-moz-border-radius-topleft:0;-webkit-border-bottom-left-radius:0;-webkit-border-top-left-radius:0;border-bottom-left-radius:0;border-top-left-radius:0}.jfk-button-collapse-right{margin-right:0;-moz-border-radius-topright:0;-moz-border-radius-bottomright:0;-webkit-border-top-right-radius:0;-webkit-border-bottom-right-radius:0;border-top-right-radius:0;border-bottom-right-radius:0}.jfk-button.jfk-button-disabled:active{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}.jfk-button-action{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;background-color:#4d90fe;background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);background-image:-o-linear-gradient(top,#4d90fe,#4787ed);background-image:linear-gradient(top,#4d90fe,#4787ed);border:1px solid #3079ed;color:#fff}.jfk-button-action.jfk-button-hover{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;background-color:#357ae8;background-image:-webkit-linear-gradient(top,#4d90fe,#357ae8);background-image:-moz-linear-gradient(top,#4d90fe,#357ae8);background-image:-ms-linear-gradient(top,#4d90fe,#357ae8);background-image:-o-linear-gradient(top,#4d90fe,#357ae8);background-image:linear-gradient(top,#4d90fe,#357ae8);border:1px solid #2f5bb7;border-bottom-color:#2f5bb7}.jfk-button-action:focus{-webkit-box-shadow:inset 0 0 0 1px #fff;-moz-box-shadow:inset 0 0 0 1px #fff;box-shadow:inset 0 0 0 1px #fff;border:1px solid #fff;border:rgba(0,0,0,0) solid 1px;outline:1px solid #4d90fe;outline:rgba(0,0,0,0) 0}.jfk-button-action.jfk-button-clear-outline{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;outline:none}.jfk-button-action:active{-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.3);-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,.3);box-shadow:inset 0 1px 2px rgba(0,0,0,.3);background:#357ae8;border:1px solid #2f5bb7;border-top:1px solid #2f5bb7}.jfk-button-action.jfk-button-disabled{background:#4d90fe;filter:alpha(opacity=50);opacity:.5}sentinel{}
+</style><br><br><div class="more-actions"><div class="spacing"></div><div class="download-links"><a class="download-buttons" href="https://mail.google.com/mail/u/0?view=att&amp;th=18f80e2747956b47&amp;attid=0&amp;disp=comp&amp;safe=1&amp;zw">Download original</a></div><div class="header-body-button"><div class="copy-header-body-button jfk-button jfk-button-action" id="copy-header-body-button" style="" tabindex="0">Copy to clipboard</div></div><div class="spacing"></div></div></div><script type="text/javascript" nonce="">
+(function(){var aa=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,c){if(a==Array.prototype||a==Object.prototype)return a;a[b]=c.value;return a},ba=function(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error("Cannot find global object");},ca=ba(this),da=function(a,b){if(b)a:{var c=ca;a=a.split(".");for(var d=
+0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&b!=null&&aa(c,a,{configurable:!0,writable:!0,value:b})}};da("Symbol",function(a){if(a)return a;var b=function(f,g){this.g=f;aa(this,"description",{configurable:!0,writable:!0,value:g})};b.prototype.toString=function(){return this.g};var c="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",d=0,e=function(f){if(this instanceof e)throw new TypeError("Symbol is not a constructor");return new b(c+(f||"")+"_"+d++,f)};
+return e});var ea=typeof Object.create=="function"?Object.create:function(a){var b=function(){};b.prototype=a;return new b},k;if(typeof Object.setPrototypeOf=="function")k=Object.setPrototypeOf;else{var l;a:{var fa={a:!0},ha={};try{ha.__proto__=fa;l=ha.a;break a}catch(a){}l=!1}k=l?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+" is not extensible");return a}:null}var ia=k,ja=function(a,b){a.prototype=ea(b.prototype);a.prototype.constructor=a;if(ia)ia(a,b);else for(var c in b)if(c!=
+"prototype")if(Object.defineProperties){var d=Object.getOwnPropertyDescriptor(b,c);d&&Object.defineProperty(a,c,d)}else a[c]=b[c];a.o=b.prototype};da("Symbol.dispose",function(a){return a?a:Symbol("Symbol.dispose")});var m=this||self,ka=function(a){var b=typeof a;b=b!="object"?b:a?Array.isArray(a)?"array":b:"null";return b=="array"||b=="object"&&typeof a.length=="number"},n=function(a){var b=typeof a;return b=="object"&&a!=null||b=="function"},la=function(a,b,c){return a.call.apply(a.bind,arguments)},
+ma=function(a,b,c){if(!a)throw Error();if(arguments.length>2){var d=Array.prototype.slice.call(arguments,2);return function(){var e=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(e,d);return a.apply(b,e)}}return function(){return a.apply(b,arguments)}},p=function(a,b,c){p=Function.prototype.bind&&Function.prototype.bind.toString().indexOf("native code")!=-1?la:ma;return p.apply(null,arguments)},q=function(a,b){function c(){}c.prototype=b.prototype;a.o=b.prototype;a.prototype=
+new c;a.prototype.constructor=a;a.R=function(d,e,f){for(var g=Array(arguments.length-2),h=2;h<arguments.length;h++)g[h-2]=arguments[h];return b.prototype[e].apply(d,g)}};var na;var oa=Array.prototype.indexOf?function(a,b){return Array.prototype.indexOf.call(a,b,void 0)}:function(a,b){if(typeof a==="string")return typeof b!=="string"||b.length!=1?-1:a.indexOf(b,0);for(var c=0;c<a.length;c++)if(c in a&&a[c]===b)return c;return-1},pa=Array.prototype.forEach?function(a,b){Array.prototype.forEach.call(a,
+b,void 0)}:function(a,b){for(var c=a.length,d=typeof a==="string"?a.split(""):a,e=0;e<c;e++)e in d&&b.call(void 0,d[e],e,a)};function qa(a){var b=a.length;if(b>0){for(var c=Array(b),d=0;d<b;d++)c[d]=a[d];return c}return[]}var r=function(){this.v=this.v;this.D=this.D};r.prototype.v=!1;r.prototype.dispose=function(){this.v||(this.v=!0,this.h())};r.prototype[Symbol.dispose]=function(){this.dispose()};r.prototype.h=function(){if(this.D)for(;this.D.length;)this.D.shift()()};a:for(var ra=["CLOSURE_FLAGS"],
+t=m,u=0;u<ra.length;u++)if(t=t[ra[u]],t==null)break a;function v(){var a=m.navigator;return a&&(a=a.userAgent)?a:""}var sa=function(){r.call(this);this.g=0};ja(sa,r);var w=new sa;var x=function(a,b){this.type=a;this.target=b;this.defaultPrevented=!1};x.prototype.g=function(){this.defaultPrevented=!0};var ta=function(){if(!m.addEventListener||!Object.defineProperty)return!1;var a=!1,b=Object.defineProperty({},"passive",{get:function(){a=!0}});try{var c=function(){};m.addEventListener("test",c,b);m.removeEventListener("test",
+c,b)}catch(d){}return a}();var ua=v().indexOf("Gecko")!=-1&&!(v().toLowerCase().indexOf("webkit")!=-1&&v().indexOf("Edge")==-1)&&!(v().indexOf("Trident")!=-1||v().indexOf("MSIE")!=-1)&&v().indexOf("Edge")==-1,va=v().toLowerCase().indexOf("webkit")!=-1&&v().indexOf("Edge")==-1;var y=function(a){x.call(this,a?a.type:"");this.relatedTarget=this.target=null;this.button=this.screenY=this.screenX=this.clientY=this.clientX=0;this.key="";this.keyCode=0;this.metaKey=this.shiftKey=this.altKey=this.ctrlKey=
+!1;this.state=null;this.pointerId=0;this.pointerType="";this.h=null;if(a){var b=this.type=a.type,c=a.changedTouches&&a.changedTouches.length?a.changedTouches[0]:null;this.target=a.target||a.srcElement;var d=a.relatedTarget;d||(b=="mouseover"?d=a.fromElement:b=="mouseout"&&(d=a.toElement));this.relatedTarget=d;c?(this.clientX=c.clientX!==void 0?c.clientX:c.pageX,this.clientY=c.clientY!==void 0?c.clientY:c.pageY,this.screenX=c.screenX||0,this.screenY=c.screenY||0):(this.clientX=a.clientX!==void 0?a.clientX:
+a.pageX,this.clientY=a.clientY!==void 0?a.clientY:a.pageY,this.screenX=a.screenX||0,this.screenY=a.screenY||0);this.button=a.button;this.keyCode=a.keyCode||0;this.key=a.key||"";this.ctrlKey=a.ctrlKey;this.altKey=a.altKey;this.shiftKey=a.shiftKey;this.metaKey=a.metaKey;this.pointerId=a.pointerId||0;this.pointerType=a.pointerType;this.state=a.state;this.h=a;a.defaultPrevented&&y.o.g.call(this)}};q(y,x);y.prototype.g=function(){y.o.g.call(this);var a=this.h;a.preventDefault?a.preventDefault():a.returnValue=
+!1};var z="closure_listenable_"+(Math.random()*1E6|0);var wa=0;var xa=function(a,b,c,d,e){this.listener=a;this.proxy=null;this.src=b;this.type=c;this.capture=!!d;this.h=e;this.key=++wa;this.g=this.F=!1},A=function(a){a.g=!0;a.listener=null;a.proxy=null;a.src=null;a.h=null};function ya(a,b,c){for(var d in a)b.call(c,a[d],d,a)}function B(a){this.src=a;this.g={};this.h=0}B.prototype.add=function(a,b,c,d,e){var f=a.toString();a=this.g[f];a||(a=this.g[f]=[],this.h++);var g=C(a,b,d,e);g>-1?(b=a[g],c||(b.F=
+!1)):(b=new xa(b,this.src,f,!!d,e),b.F=c,a.push(b));return b};var za=function(a,b){var c=b.type;if(c in a.g){var d=a.g[c],e=oa(d,b),f;(f=e>=0)&&Array.prototype.splice.call(d,e,1);f&&(A(b),a.g[c].length==0&&(delete a.g[c],a.h--))}},C=function(a,b,c,d){for(var e=0;e<a.length;++e){var f=a[e];if(!f.g&&f.listener==b&&f.capture==!!c&&f.h==d)return e}return-1};var D="closure_lm_"+(Math.random()*1E6|0),E={},Aa=0,F=function(a,b,c,d,e){if(d&&d.once)return Ba(a,b,c,d,e);if(Array.isArray(b)){for(var f=0;f<b.length;f++)F(a,
+b[f],c,d,e);return null}c=G(c);return a&&a[z]?a.l.add(String(b),c,!1,n(d)?!!d.capture:!!d,e):Ca(a,b,c,!1,d,e)},Ca=function(a,b,c,d,e,f){if(!b)throw Error("Invalid event type");var g=n(e)?!!e.capture:!!e,h=H(a);h||(a[D]=h=new B(a));c=h.add(b,c,d,g,f);if(c.proxy)return c;d=Da();c.proxy=d;d.src=a;d.listener=c;if(a.addEventListener)ta||(e=g),e===void 0&&(e=!1),a.addEventListener(b.toString(),d,e);else if(a.attachEvent)a.attachEvent(Ea(b.toString()),d);else if(a.addListener&&a.removeListener)a.addListener(d);
+else throw Error("addEventListener and attachEvent are unavailable.");Aa++;return c},Da=function(){var a=Fa,b=function(c){return a.call(b.src,b.listener,c)};return b},Ba=function(a,b,c,d,e){if(Array.isArray(b)){for(var f=0;f<b.length;f++)Ba(a,b[f],c,d,e);return null}c=G(c);return a&&a[z]?a.l.add(String(b),c,!0,n(d)?!!d.capture:!!d,e):Ca(a,b,c,!0,d,e)},Ga=function(a,b,c,d,e){if(Array.isArray(b))for(var f=0;f<b.length;f++)Ga(a,b[f],c,d,e);else(d=n(d)?!!d.capture:!!d,c=G(c),a&&a[z])?(a=a.l,b=String(b).toString(),
+b in a.g&&(f=a.g[b],c=C(f,c,d,e),c>-1&&(A(f[c]),Array.prototype.splice.call(f,c,1),f.length==0&&(delete a.g[b],a.h--)))):a&&(a=H(a))&&(b=a.g[b.toString()],a=-1,b&&(a=C(b,c,d,e)),(c=a>-1?b[a]:null)&&I(c))},I=function(a){if(typeof a!=="number"&&a&&!a.g){var b=a.src;if(b&&b[z])za(b.l,a);else{var c=a.type,d=a.proxy;b.removeEventListener?b.removeEventListener(c,d,a.capture):b.detachEvent?b.detachEvent(Ea(c),d):b.addListener&&b.removeListener&&b.removeListener(d);Aa--;(c=H(b))?(za(c,a),c.h==0&&(c.src=null,
+b[D]=null)):A(a)}}},Ea=function(a){return a in E?E[a]:E[a]="on"+a},Fa=function(a,b){if(a.g)a=!0;else{b=new y(b,this);var c=a.listener,d=a.h||a.src;a.F&&I(a);a=c.call(d,b)}return a},H=function(a){a=a[D];return a instanceof B?a:null},J="__closure_events_fn_"+(Math.random()*1E9>>>0),G=function(a){if(typeof a==="function")return a;a[J]||(a[J]=function(b){return a.handleEvent(b)});return a[J]};var K=function(){r.call(this);this.l=new B(this)};q(K,r);K.prototype[z]=!0;K.prototype.removeEventListener=function(a,
+b,c,d){Ga(this,a,b,c,d)};K.prototype.h=function(){K.o.h.call(this);if(this.l){var a=this.l,b=0,c;for(c in a.g){for(var d=a.g[c],e=0;e<d.length;e++)++b,A(d[e]);delete a.g[c];a.h--}}};function L(a,b,c){r.call(this);this.i=a;this.C=b||0;this.j=c;this.l=p(this.B,this)}q(L,r);L.prototype.g=0;L.prototype.h=function(){L.o.h.call(this);this.isActive()&&m.clearTimeout(this.g);this.g=0;delete this.i;delete this.j};L.prototype.start=function(a){this.isActive()&&m.clearTimeout(this.g);this.g=0;var b=this.l;a=
+a!==void 0?a:this.C;if(typeof b!=="function")if(b&&typeof b.handleEvent=="function")b=p(b.handleEvent,b);else throw Error("Invalid listener argument");this.g=Number(a)>2147483647?-1:m.setTimeout(b,a||0)};L.prototype.isActive=function(){return this.g!=0};L.prototype.B=function(){this.g=0;this.i&&this.i.call(this.j)};var M=function(a,b){return typeof b==="string"?a.getElementById(b):b},Ia=function(a,b){ya(b,function(c,d){d=="style"?a.style.cssText=c:d=="class"?a.className=c:d=="for"?a.htmlFor=c:Ha.hasOwnProperty(d)?
+a.setAttribute(Ha[d],c):d.lastIndexOf("aria-",0)==0||d.lastIndexOf("data-",0)==0?a.setAttribute(d,c):a[d]=c})},Ha={cellpadding:"cellPadding",cellspacing:"cellSpacing",colspan:"colSpan",frameborder:"frameBorder",height:"height",maxlength:"maxLength",nonce:"nonce",role:"role",rowspan:"rowSpan",type:"type",usemap:"useMap",valign:"vAlign",width:"width"},Ja=function(a,b,c,d){function e(h){h&&b.appendChild(typeof h==="string"?a.createTextNode(h):h)}for(;d<c.length;d++){var f=c[d];if(!ka(f)||n(f)&&f.nodeType>
+0)e(f);else{a:{if(f&&typeof f.length=="number"){if(n(f)){var g=typeof f.item=="function"||typeof f.item=="string";break a}if(typeof f==="function"){g=typeof f.item=="function";break a}}g=!1}pa(g?qa(f):f,e)}}},Ka=function(a,b){b=String(b);a.contentType==="application/xhtml+xml"&&(b=b.toLowerCase());return a.createElement(b)},N=function(a){if(a.nodeType!=1)return!1;switch(a.tagName){case "APPLET":case "AREA":case "BASE":case "BR":case "COL":case "COMMAND":case "EMBED":case "FRAME":case "HR":case "IMG":case "INPUT":case "IFRAME":case "ISINDEX":case "KEYGEN":case "LINK":case "NOFRAMES":case "NOSCRIPT":case "META":case "OBJECT":case "PARAM":case "SCRIPT":case "SOURCE":case "STYLE":case "TRACK":case "WBR":return!1}return!0},
+La=function(a){a&&a.parentNode&&a.parentNode.removeChild(a)},O=function(a){return a.nodeType==9?a:a.ownerDocument||a.document},P=function(){this.g=m.document||document};P.prototype.m=function(){return M(this.g)};P.prototype.i=function(a,b,c){var d=this.g,e=arguments,f=e[1],g=Ka(d,String(e[0]));f&&(typeof f==="string"?g.className=f:Array.isArray(f)?g.className=f.join(" "):Ia(g,f));e.length>2&&Ja(d,g,e,2);return g};P.prototype.h=function(a,b){Ja(O(a),a,arguments,1)};var Ma=function(){};var Na=function(){};
+var Q=function(a){this.g=a};q(Q,Na);var Oa=function(a){var b=O(a).createRange();if(a.nodeType==3)b.setStart(a,0),b.setEnd(a,a.length);else if(N(a)||a.nodeType==3){for(var c,d=a;(c=d.firstChild)&&(N(c)||c.nodeType==3);)d=c;b.setStart(d,0);for(d=a;(c=d.lastChild)&&(N(c)||c.nodeType==3);)d=c;b.setEnd(d,d.nodeType==1?d.childNodes.length:d.length)}else c=a.parentNode,a=Array.prototype.indexOf.call(c.childNodes,a),b.setStart(c,a),b.setEnd(c,a+1);return b},Pa=function(a,b,c,d){var e=O(a).createRange();e.setStart(a,
+b);e.setEnd(c,d);return e};Q.prototype.h=function(a){a.removeAllRanges();a.addRange(this.g)};function R(a){this.g=a}q(R,Q);R.prototype.h=function(a,b){!b||this.g.collapsed?R.o.h.call(this,a,b):(a.collapse(this.g.endContainer,this.g.endOffset),a.extend(this.g.startContainer,this.g.startOffset))};function S(a){this.g=a}q(S,Q);S.prototype.h=function(a,b){b?a.setBaseAndExtent(this.g.endContainer,this.g.endOffset,this.g.startContainer,this.g.startOffset):a.setBaseAndExtent(this.g.startContainer,this.g.startOffset,
+this.g.endContainer,this.g.endOffset)};var Qa=function(){this.h=this.j=this.i=this.v=this.g=null;this.l=!1};q(Qa,Ma);var T=function(a){var b;if(!(b=a.g)){b=a.v||(a.v=T(a).g.startContainer);var c=a.i!=null?a.i:a.i=T(a).g.startOffset,d=a.j||(a.j=T(a).g.endContainer),e=a.h!=null?a.h:a.h=T(a).g.endOffset;b=va?new S(Pa(b,c,d,e)):ua?new R(Pa(b,c,d,e)):new Q(Pa(b,c,d,e));b=a.g=b}return b};var U=function(a){r.call(this);this.i=a;this.g={}};q(U,r);var Ra=[],Sa=function(a,b,c,d){Array.isArray(c)||(c&&(Ra[0]=
+c.toString()),c=Ra);for(var e=0;e<c.length;e++){var f=F(b,c[e],d||a.handleEvent,!1,a.i||a);if(!f)break;a.g[f.key]=f}},Ta=function(a){ya(a.g,function(b,c){this.g.hasOwnProperty(c)&&I(b)},a);a.g={}};U.prototype.h=function(){U.o.h.call(this);Ta(this)};U.prototype.handleEvent=function(){throw Error("EventHandler.handleEvent not implemented");};var V=function(a,b){a.style.display=b?"":"none"};var W=function(){};W.g=void 0;W.h=function(){W.g||(W.g=new W)};var X=function(a){K.call(this);a||(a=na||(na=new P));
+this.B=a;this.u=!1;this.g=null;this.i=void 0;this.G=this.C=null};q(X,K);W.h();X.prototype.m=function(){return this.g};var Ua=function(a){a.i||(a.i=new U(a));return a.i};X.prototype.H=function(){this.g=Ka(this.B.g,"DIV")};var Wa=function(a){a.u=!0;Va(a,function(b){!b.u&&b.m()&&Wa(b)})},Xa=function(a){Va(a,function(b){b.u&&Xa(b)});a.i&&Ta(a.i);a.u=!1};X.prototype.h=function(){this.u&&Xa(this);this.i&&(this.i.dispose(),delete this.i);Va(this,function(a){a.dispose()});this.g&&La(this.g);this.C=this.g=
+this.G=null;X.o.h.call(this)};var Va=function(a,b){a.G&&a.G.forEach(b,void 0)};var Ya;var Za=function(a,b,c){Array.isArray(c)&&(c=c.join(" "));var d="aria-"+b;c===""||c==void 0?(Ya||(c={},Ya=(c.atomic=!1,c.autocomplete="none",c.dropeffect="none",c.haspopup=!1,c.live="off",c.multiline=!1,c.multiselectable=!1,c.orientation="vertical",c.readonly=!1,c.relevant="additions text",c.required=!1,c.sort="none",c.busy=!1,c.disabled=!1,c.hidden=!1,c.invalid="false",c)),c=Ya,b in c?a.setAttribute(d,c[b]):a.removeAttribute(d)):
+a.setAttribute(d,c)};var $a=function(a){return typeof a.className=="string"?a.className:a.getAttribute&&a.getAttribute("class")||""},ab=function(a,b){typeof a.className=="string"?a.className=b:a.setAttribute&&a.setAttribute("class",b)},bb=function(a,b){a.classList?b=a.classList.contains(b):(a=a.classList?a.classList:$a(a).match(/\S+/g)||[],b=oa(a,b)>=0);return b},cb=function(a,b){if(a.classList)a.classList.add(b);else if(!bb(a,b)){var c=$a(a);ab(a,c+(c.length>0?" "+b:b))}},db=function(a,b){a.classList?
+a.classList.remove(b):bb(a,b)&&ab(a,Array.prototype.filter.call(a.classList?a.classList:$a(a).match(/\S+/g)||[],function(c){return c!=b}).join(" "))};var Y=function(a,b){X.call(this,b);this.j=a};q(Y,X);Y.prototype.A="info";Y.prototype.s=!1;var eb={info:"jfk-butterBar-info",error:"jfk-butterBar-error",warning:"jfk-butterBar-warning",promo:"jfk-butterBar-promo"},fb=function(a,b){if(a.g){var c=a.m(),d=eb[b];db(c,eb[a.A]);cb(c,d)}a.A=b};Y.prototype.isVisible=function(){var a=this.m();return a!=null&&
+bb(a,"jfk-butterBar-shown")};Y.prototype.H=function(){this.g=this.B.i("DIV","jfk-butterBar");var a=this.m();a&&(Za(a,"live","assertive"),Za(a,"atomic","true"));this.j=this.j;if(a=this.m()){for(var b=this.B,c;c=a.firstChild;)a.removeChild(c);b.h(a,this.j)}this.s=this.s;(a=this.m())&&(this.s?cb(a,"jfk-butterBar-mini"):db(a,"jfk-butterBar-mini"));fb(this,this.A)};var Z=function(a){X.call(this,a);this.s=M(document,"copy-header-body-button");this.j=M(document,"raw_message_text");this.J=M(document,"copy-success");
+this.I=M(document,"copy-error");M(document,"bottom-area");a=new Y(M(document,"status-messages"));var b=M(document,"butterbar-wrap");if(a.u)throw Error("Component already rendered");a.g||a.H();b?b.insertBefore(a.g,null):a.B.g.body.appendChild(a.g);a.C&&!a.C.u||Wa(a);fb(a,"info");this.A=a;this.O=new L(this.P,1E4,this);a=document;var c;a.getElementsByClassName?c=a.getElementsByClassName("raw_message")[0]:c=document.querySelector(".raw_message");this.M=c||null;this.L=this.j.getAttribute("class")};ja(Z,
+X);Z.prototype.K=function(){var a=!1;this.j.removeAttribute("class");La(this.j);document.body.appendChild(this.j);try{var b=this.j;var c=va?new S(Oa(b)):ua?new R(Oa(b)):new Q(Oa(b));var d=new Qa;d.g=c;d.l=!1;var e=T(d),f=O(e.g.startContainer);e.h((f?f.defaultView:window).getSelection(),d.l);a=document.execCommand("copy")}catch(hb){var g=Error("Could not copy raw header and body to clipboard.");if(g instanceof Object&&!Object.isFrozen(g)){var h=g.fileName||g.filename||g.sourceURL||m.$googDebugFname||
+location.href;var gb=h&&(typeof h==="object"?h.href:h);try{g.fileName=gb}catch(ib){}}if(w.g>=3)throw Error("Recursive loop detected while trying to report exception. Message: null");w.g++;w.g--}finally{La(this.j),this.M.appendChild(this.j),this.j.setAttribute("class",this.L)}c=this.A.m();cb(c,"jfk-butterBar-shown");this.O.start(1E4);a?(V(this.J,!0),V(this.I,!1)):(V(this.J,!1),V(this.I,!0))};Z.prototype.P=function(){var a=this.A.m();db(a,"jfk-butterBar-shown")};Z.prototype.N=function(a){a.keyCode==
+13&&this.K()};F(window,"load",function(){var a=new Z;if(document.queryCommandSupported("copy")){V(a.s,!0);var b=Ua(a),c=a.s,d=p(a.K,a);Sa(b,c,"click",d);b=Ua(a);c=a.s;a=p(a.N,a);Sa(b,c,"keypress",a)}})}).call(this);
+</script><div id="bottom-area" class="bottom-area"><div class="raw_message"><pre class="raw_message_text" id="raw_message_text">Delivered-To: info@pexabo.com
+Received: by 2002:a17:906:bfe6:b0:a5c:1688:5be0 with SMTP id vr6csp983866ejb;
+        Thu, 16 May 2024 03:11:17 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IH+4GHvotAA1cwUIV92tNF1WHPi4tjFF40BkEeyhNzL6pKtR3B1hGBmJnugNpm1zzGwOtRg
+X-Received: by 2002:a05:6214:428b:b0:6a0:e54b:ab46 with SMTP id 6a1803df08f44-6a168377346mr223765236d6.47.1715854275937;
+        Thu, 16 May 2024 03:11:15 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1715854275; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=JWi9oaD25clu3/nUsc1oOgfkLQUOek52N7ceIb5kZsASiP5pXnC0cIr3huikaqNUNH
+         WJGmscY2G5LJK0Q7jVFsND07l/bYeQfX269Fj1ErnaO3yYb2NZZ7LAit+uFCXr5ON61m
+         5nNkUyeb8gJdjHgQq971oVfI03I0IZYwJDfkf5zxrBA/eb03dxZyovsfoMLSfvdeRNrc
+         CHwojUYlVSYcSuXZYumM2T9W+wSLw9Qk7EtOMG7O6Jdh4nys/swjuK0a5oj286C2j4UH
+         abozGge3t6FYCuM92Fnl/sEov7zRRz7wKJnrk4aHDNBbCZIIp6HF+Rseijh2t3vx/H/r
+         D1bQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:authentication-results-original:msip_labels
+         :content-language:accept-language:message-id:date:thread-index
+         :thread-topic:subject:to:from:dkim-signature;
+        bh=XRDi+d11IZW9fpUH/HWUWV45koJDoIvaE6RAjCwcCLg=;
+        fh=fs/6CM9zHrtYqHbYF77sseWvNdzHSfyeMHUUdKxEPp8=;
+        b=KM/CDnlIwsWbKago3FzNPwL9VBhQcyp59tyDLSWlM/n23ZdJVl/6viplPeUgXjKje3
+         4mBD0BO4CgT8N1h9AatnSBj7w3vUu8Vk/dIZICn7Mw6tzQvIsNXp6dbQd7gZK3FasDT5
+         tOsZUT6mbXNPKIz3gQ7aJFEkdYAiH47+T7wQK41RX6y6J4tA7zlQkRMBGEnxvHzFj4l7
+         ohGAeY5I0KTytqVyMLlt6jicHKbiXRGE1rHbMwF3NDREfBf5NYZyNp54/MrqMVny0H+u
+         wKfZyX4qhvbLbrkGffhkJYiMU2NnX8G2vKZHIc+1nZ5ppDsI8GIL8YOEXhE4wzvCmEWY
+         5Txg==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@theknowledgeacademy.com header.s=selector1 header.b=fjsc3zNZ;
+       arc=pass (i=1 spf=pass spfdomain=theknowledgeacademy.com dmarc=pass fromdomain=theknowledgeacademy.com);
+       spf=pass (google.com: domain of pallavi.bachchhav@theknowledgeacademy.com designates 2a01:111:f403:2607::701 as permitted sender) smtp.mailfrom=Pallavi.Bachchhav@theknowledgeacademy.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=theknowledgeacademy.com
+Return-Path: &lt;Pallavi.Bachchhav@theknowledgeacademy.com&gt;
+Received: from EUR02-VI1-obe.outbound.protection.outlook.com (mail-vi1eur02on20701.outbound.protection.outlook.com. [2a01:111:f403:2607::701])
+        by mx.google.com with ESMTPS id 6a1803df08f44-6a15f29b748si158178476d6.211.2024.05.16.03.11.14
+        for &lt;info@pexabo.com&gt;
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 16 May 2024 03:11:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pallavi.bachchhav@theknowledgeacademy.com designates 2a01:111:f403:2607::701 as permitted sender) client-ip=2a01:111:f403:2607::701;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@theknowledgeacademy.com header.s=selector1 header.b=fjsc3zNZ;
+       arc=pass (i=1 spf=pass spfdomain=theknowledgeacademy.com dmarc=pass fromdomain=theknowledgeacademy.com);
+       spf=pass (google.com: domain of pallavi.bachchhav@theknowledgeacademy.com designates 2a01:111:f403:2607::701 as permitted sender) smtp.mailfrom=Pallavi.Bachchhav@theknowledgeacademy.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=theknowledgeacademy.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none; b=OIjxQMQfr5Y0gG7hD6ENOmrs5yiHhxj1yEYQm6WmcFSVLIRfpzIbPJWA0CDHxvvq6hyqSXWcsXfDofFnAWN010FV+FBM+nSGu8ZmEJ7kNa66L5SKYGS19rFTjEOGZBBh/LWZ2CVlPjzcEiKOwa8U8+/W5jxTyU3mxnXl/b1i+33wRqZcKjpEDdK6DUYEPIzi5SC0c6Yj+lPzXRmj36/WPmcXRWUcTBeq1NnZu6UOUgvfPwWFe46BZxxmpChIHvTYU9yX/A2nkYoKCNXcm62se667kMBQ+irFXY5maZXL4gPOnb+l/9TWuXLL8l5FjLyfrFOKBAHknU9m5F6KxU/Z2w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; s=arcselector9901; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1; bh=XRDi+d11IZW9fpUH/HWUWV45koJDoIvaE6RAjCwcCLg=; b=aqMwWsZ6capE/7crJ6R8wVX2bDaSl9EWgniSLqjdzBjETEYxGTF5UlAZ8nqTxmHEFu7xRW6sqMhswzsghJvLFSpH0mZexmXqE1MUR07/UR7VPk0tiXCeYqXDBoHFPHM3taqQSV2gstmqydKIl2u7ENwJ3OBvdqNAS1ktxkIMCJGqS6+Gh1IpTquvMzB6MhSq3BHvriT+UBQBIn/xa+QtYwYSNdXxFL2IxL4OSQDSOrvLlTtQacJYj+MDCD0NzoG3wFV+Zaoncdv7NfLfhnqpazGAxleOCSiKcUhgLs5Am5dDGhy9sA0HTgZVZvA/JLWZ+np3eYNxoNiWJRgeglvxVA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass (sender ip is 51.140.37.132) smtp.rcpttodomain=pexabo.com smtp.mailfrom=theknowledgeacademy.com; dmarc=pass (p=none sp=none pct=100) action=none header.from=theknowledgeacademy.com; dkim=none (message not signed); arc=none (0)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=theknowledgeacademy.com; s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck; bh=XRDi+d11IZW9fpUH/HWUWV45koJDoIvaE6RAjCwcCLg=; b=fjsc3zNZ73fATepGS8GKJ2dGii3FIHcavYG1W1ozQo7Rm//pK9VWRBGgz/iGyAOJTp6SLqROVB32Om/0ZjBEY2jLHZIzypaeGvWxGxyAn1z8+71a1mLPh1XAj4dw4di1pzDxBgebB3AkQKoa601oobyPRXiUpJUkt8xbFfKI42c=
+Received: from AM0PR10CA0116.EURPRD10.PROD.OUTLOOK.COM (2603:10a6:208:e6::33) by DB9PR08MB8698.eurprd08.prod.outlook.com (2603:10a6:10:3d2::19) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.28; Thu, 16 May 2024 10:11:09 +0000
+Received: from AM4PEPF00027A5E.eurprd04.prod.outlook.com (2603:10a6:208:e6:cafe::20) by AM0PR10CA0116.outlook.office365.com (2603:10a6:208:e6::33) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.27 via Frontend Transport; Thu, 16 May 2024 10:11:09 +0000
+X-MS-Exchange-Authentication-Results: spf=pass (sender IP is 51.140.37.132) smtp.mailfrom=theknowledgeacademy.com; dkim=none (message not signed) header.d=none;dmarc=pass action=none header.from=theknowledgeacademy.com;
+Received-SPF: Pass (protection.outlook.com: domain of theknowledgeacademy.com designates 51.140.37.132 as permitted sender) receiver=protection.outlook.com; client-ip=51.140.37.132; helo=uk1.smtp.exclaimer.net; pr=C
+Received: from uk1.smtp.exclaimer.net (51.140.37.132) by AM4PEPF00027A5E.mail.protection.outlook.com (10.167.16.72) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.21 via Frontend Transport; Thu, 16 May 2024 10:11:08 +0000
+Received: from EUR02-DB5-obe.outbound.protection.outlook.com (104.47.11.104)
+	 by uk1.smtp.exclaimer.net (51.140.37.132) with Exclaimer Signature Manager
+	 ESMTP Proxy uk1.smtp.exclaimer.net (tlsversion=TLS12,
+	 tlscipher=TLS_DIFFIEHELLMAN_WITH_AES256_NONE); Thu, 16 May 2024 10:11:09
+	 +0000
+X-ExclaimerHostedSignatures-MessageProcessed: true
+X-ExclaimerProxyLatency: 6320728
+X-ExclaimerImprintLatency: 3034913
+X-ExclaimerImprintAction: 4cebf0010ddb4ecea0c340e2750d4032
+Received: from DB9PR08MB9828.eurprd08.prod.outlook.com (2603:10a6:10:45f::6) by PAVPR08MB9037.eurprd08.prod.outlook.com (2603:10a6:102:325::13) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.27; Thu, 16 May 2024 10:11:05 +0000
+Received: from DB9PR08MB9828.eurprd08.prod.outlook.com ([fe80::1eb9:f9e9:2735:bb65]) by DB9PR08MB9828.eurprd08.prod.outlook.com ([fe80::1eb9:f9e9:2735:bb65%6]) with mapi id 15.20.7544.052; Thu, 16 May 2024 10:11:05 +0000
+From: Pallavi Bachchhav &lt;Pallavi.Bachchhav@theknowledgeacademy.com&gt;
+To: "info@pexabo.com" &lt;info@pexabo.com&gt;
+Subject: The knowledge Academy - Completion of the onboarding process of a freelance trainer.
+Thread-Topic: The knowledge Academy - Completion of the onboarding process of a freelance trainer.
+Thread-Index: AQHap3h2UWLksU7iIEmEP0gd+SaUqw==
+Date: Thu, 16 May 2024 10:11:05 +0000
+Message-ID: &lt;DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2@DB9PR08MB9828.eurprd08.prod.outlook.com&gt;
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator: 
+msip_labels: 
+Authentication-Results-Original: dkim=none (message not signed) header.d=none;dmarc=none action=none header.from=theknowledgeacademy.com;
+x-ms-traffictypediagnostic: DB9PR08MB9828:EE_|PAVPR08MB9037:EE_|AM4PEPF00027A5E:EE_|DB9PR08MB8698:EE_
+X-MS-Office365-Filtering-Correlation-Id: 71bb0104-3ae0-4496-b9fb-08dc759081c3
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;ARA:13230031|366007|376005|1800799015|38070700009;
+X-Microsoft-Antispam-Message-Info-Original: kfcXTJO8XMLpunJxXO14Q+c+O3qbbcUE+EYr7AJLZVEPbjwthhSN6f9AJ1jbhBU8HJZfhBpQIbq/DQ6qnMZjC6uafDpUftfLY7qnuF6Mf5LZ2LRpSWzvvKRkJaHi8RdFMc7tXbVa/r7x1xdjclTGkSjtPL0quWmPd1kpG/+38uEbn15P5R+IjrOMaYKp4N79JIOzlTvt9Gy5Lqg0eKvZFXaTIZR95TrsRe5W1G7xP3bNY1c5NpkQVqx8R3BeeZi+L4G+6XGz0GHFAvSkjVKWo7OqPNxTX0o+xpjvoO/8iKhnvwe/vUwFIBknu+kaS8uwe0Wn2C3g1vp0NytkJE/OBfwQ9m6JU9LhkTCPb5xEp8fMnd4Y6Hry0ISjy3F7HEbdYMZxORgr57OzZMHmu+S6vo50EIyUSXpWyM3/8Cwd0l8xRFy194UPdo3pKxj/hPdffaCBNRqvMTtnXs8gZOEqycCcf91FUR1qbMEm52WufFF/hdlKNGDzJv4/4Pvqz7rsZkysURoyoSTkBo+rrpIwHBhKCLZKgFVoisj5P795pJNxQlQfYrb/ubX3+40NCAew81ZgMbYXjSTKDEBlP/5y2GjofSEBQAxxXRRb6T0Ddnedkh8CPlMJQyP1VCdZ+JCwtEDH6tX11H7f8cZFd57quflfeZ3I9C4MtCALuqHPxchFEoXAAALkBWPGARzCUcvcw3FTZ86FEmnNbs/IC5AikIUCPIKANWuvePHHhp9I4aKAo88CdGSMCFsvHdoLuHuqg/mZRxx/ZiRCk/M87geYwof/DQs3BL6f4+btppwWviS+yW0zZtPhfvqNyv/fpjEowlKyfcEva4zzJL8MOcqutb18vmysoaaZcZz286ThXYtjOFh95L29Juh1mVea5KxozQrRl6GWSD8L9aItHbkQ+blenI9+0En3mQU1tqzqtWIBH6FVDu6wNQgijVCHApt9m4j1H2BdyojRp+kCpcasKkMFO4ryh3F75LnLGSIj1GXl1PWTlgjGZNi/kDMQ5g9UFlZmxLn9E9nS5n3w+VnebOZWVHnI5tWNwe7gR2NOLidmdDPC9YpyU/tHySHYyUGaDNsqbn6thGkOAxWSQRZ7tqhekGGGN5tiHrUXjkEmFkUOXNzBIseLqx0Pcxs9Qv/jdJmckBanDSIIpX55JYo0zWiGT1knvs02YnXVn5HD7iwfMwKlI6YnAZiNb17FtVVXhfhXEBMx1LIj5bcsLs3AQlXUgWDujQpTWsfJiBhLV2s=
+X-Forefront-Antispam-Report-Untrusted: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:DB9PR08MB9828.eurprd08.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230031)(366007)(376005)(1800799015)(38070700009);DIR:OUT;SFP:1102;
+Content-Type: multipart/mixed; boundary="_006_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_"
+MIME-Version: 1.0
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PAVPR08MB9037
+Return-Path: Pallavi.Bachchhav@theknowledgeacademy.com
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: AM4PEPF00027A5E.eurprd04.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id-Prvs: d9fb00fa-da1c-4336-5d07-08dc75907f7a
+X-Microsoft-Antispam: BCL:0;ARA:13230031|376005|1800799015|35042699013|82310400017|36860700004;
+X-Microsoft-Antispam-Message-Info: hCsiD6x6XZcTY/BV10mjwEpLRzwJPA+XAE8wsp85i6Tp9jmt9mKU1527HSIyLeEyCSu4tK2iDEEeDGbgU0eZKiJOK7cR08uUBL/vrj7UYHdxAMAmc0HalnrxhIATenjP4hqvv+qSSzGMOsHYSjg9iq6UIVOJgEhaNLB/R031AKm6q7jsBFT1oArp0xLIRu0+ftoTDwxu8SWlm+KNKFvfLWTr55a1OMvx8S/1ioe8pJ5J26BZJ4YKYzz449faGrSHCyqkgbfWOZ00Ss/cijdCfHCagnkBIP1tdwNJ0p79BFGneFpp1Deo4ifaupBMVkG0HTE4l7V34xp+9k3QSrKr3C4+ByfUfR6TLg3g5cDf6ugAoFG7VPWfnkYu3aZOztOZ3qFDcZ4mGt1gxmTahPpbF4RLrx0fBsgVAyLrgFOZBY3oUgtl2xUodPW367G6fpncnPGGmBFe5DqA4ls8d8yCPb4d0WoE0sE8aVfZvJdGcIpqUafEpmuCzigTb3n7X1wigzBMKbaxo/WUI+yIEqEgpVqVFaKtCkDobIMfAvVzVj0nSMf0ZDMr4UkIhHDy1c6B/rPYBju4qoRgTKPd1R+C79HSTmF7iBeekYGrdXShdmsANoaLBcVFqT81+trnbfNEEXX/wsW/ESgND/ebLXWi5tpw/+LjVQ3YrVHZuV4XVbKMGg7pLK7qp+FPcqrTu9/AkqhqWWuROOiRKgdU1+Fvj26W7vZ3vcgEiGRmb65r9KBTRJvslQCs8UHh4bNYvHvcGOf3YOUXUs4/fxh96ZVx0Ac01DC0xwrMn2EjyModX6ZVwYCxuWw8TozpQxExrFZJIb2490op/2Ig1iTaF69Ya/SCFeprqvNPrMlni+3YMlfW+TENPggffJxRdBKv/u2YC9/OP5mzc6DXLjbmsiHH99nWrBFgeKNiygIb+5hrW4kLcQaQlfI8L26E8RN0zMEGkwOiJLlgEoUMUPjWDAzzhA3R+9w42mj5zK3Ss75qH5xJumA22okkOtqrM2GBGFKhLtEW5Bq7g78PrSem7Er8LH3ynkwf45dP54QlClSadRxjFD7bwLkXtk8KBh2o4c/8NZAVm0wYUHdFwUtvN/2LBB64faChBsJOn8TizSoqrwI6jwA8qWFrWh7y9Popphi4YVJIw23BmbNorOuMY9L7nUMKkNsVVbIUtzEX6tReKwes9SuBGssMvBj0imL7vZQOzgPAmRVd5z9uEWhwPTIGQeWyEFGuGRNvOCTyqIVw8rC/DI1+MXbeu4glr7aAGfGTRECLr4ezaMZKoh/SkhsNBA==
+X-Forefront-Antispam-Report: CIP:51.140.37.132;CTRY:GB;LANG:en;SCL:1;SRV:;IPV:CAL;SFV:NSPM;H:uk1.smtp.exclaimer.net;PTR:uk1.smtp.exclaimer.net;CAT:NONE;SFS:(13230031)(376005)(1800799015)(35042699013)(82310400017)(36860700004);DIR:OUT;SFP:1102;
+X-OriginatorOrg: theknowledgeacademy.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 16 May 2024 10:11:08.8533 (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 71bb0104-3ae0-4496-b9fb-08dc759081c3
+X-MS-Exchange-CrossTenant-Id: edb464c8-aa5e-46aa-94ae-a909f70a7a55
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=edb464c8-aa5e-46aa-94ae-a909f70a7a55;Ip=[51.140.37.132];Helo=[uk1.smtp.exclaimer.net]
+X-MS-Exchange-CrossTenant-AuthSource: AM4PEPF00027A5E.eurprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DB9PR08MB8698
+
+--_006_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: multipart/related; boundary="_005_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_"; type="multipart/alternative"
+
+--_005_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: multipart/alternative; boundary="_000_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_"
+
+--_000_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Erdem,
+
+I hope this message finds you well.
+
+Attached to this email, you'll find the Non-Disclosure Agreement (NDA) for =
+your review and signature. Kindly take a moment to go through it and return=
+ the signed document to me at your earliest convenience.
+
+The NDA is a crucial step in our onboarding process for freelance trainers,=
+ as it ensures the confidentiality of the courseware and other sensitive in=
+formation that will be shared with you. Should you have any questions or re=
+quire further clarification, please don't hesitate to reach out.
+
+Looking forward to receiving the signed NDA from you.
+
+
+Regards
+Pallavi Bachchhav
+Global Trainer Recruiter
+https://www.theknowledgeacademy.com/in/
+https://www.linkedin.com/in/pallavi-bachchhav-81323925&lt;https://www.linkedin=
+.com/in/pallavi-bachchhav-813239250/&gt;0/&lt;https://www.linkedin.com/in/pallavi=
+-bachchhav-813239250/&gt;
+
+[cid:90b26162-5a18-45e3-acb7-b9ff985c2a35]
+
+
+
+
+=20
+Pallavi Bachchhav
+Pallavi.Bachchhav@theknowledgeacademy.com
+01344 203999
+theknowledgeacademy.com
+Let's chat on Teams
+Update contact preferences
+
+--_000_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"&gt;
+&lt;style type=3D"text/css" style=3D"display:none;"&gt; P {margin-top:0;margin-bo=
+ttom:0;} &lt;/style&gt;
+&lt;/head&gt;
+&lt;body dir=3D"ltr"&gt;
+&lt;div class=3D"elementToProof" style=3D"text-align: left; text-indent: 0px; =
+margin: 0px; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, C=
+alibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+Hi Erdem,&lt;/div&gt;
+&lt;div class=3D"elementToProof" style=3D"text-align: left; text-indent: 0px; =
+margin: 0px; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, C=
+alibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+I hope this message finds you well.&lt;/div&gt;
+&lt;div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+Attached to this email, you'll find the &lt;b&gt;Non-Disclosure Agreement (NDA)&lt;/=
+b&gt;&amp;nbsp;for your review and signature. Kindly take a moment to go through i=
+t and return the signed document to me at your earliest convenience.&lt;/div&gt;
+&lt;div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+The&amp;nbsp;NDA&amp;nbsp;is a crucial step in our onboarding process for freelance=
+ trainers, as it ensures the confidentiality of the courseware and other se=
+nsitive information that will be shared with you. Should you have any quest=
+ions or require further clarification, please
+ don't hesitate to reach out.&lt;/div&gt;
+&lt;div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div class=3D"elementToProof" style=3D"text-align: left; text-indent: 0px; =
+margin: 0px; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, C=
+alibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+Looking forward to receiving the signed&amp;nbsp;NDA&amp;nbsp;from you.&amp;nbsp;&lt;/div&gt;
+&lt;div class=3D"elementToProof" style=3D"text-align: left; text-indent: 0px; =
+margin: 0px; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, C=
+alibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div class=3D"elementToProof" style=3D"text-align: left; text-indent: 0px; =
+margin: 0px; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, C=
+alibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div id=3D"Signature"&gt;
+&lt;div style=3D"font-family: Georgia, serif; font-size: 12pt; color: rgb(118,=
+ 62, 155);"&gt;
+&lt;span style=3D"background-color: rgb(255, 255, 255);"&gt;&lt;b&gt;Regards&lt;/b&gt;&lt;/span&gt;=
+&lt;/div&gt;
+&lt;div style=3D"font-family: Georgia, serif; font-size: 12pt; color: rgb(118,=
+ 62, 155);"&gt;
+&lt;span style=3D"background-color: rgb(255, 255, 255);"&gt;&lt;b&gt;Pallavi Bachchhav&lt;=
+/b&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div style=3D"font-family: Georgia, serif; font-size: 12pt; color: rgb(118,=
+ 62, 155);"&gt;
+&lt;b&gt;Global Trainer Recruiter&lt;/b&gt;&lt;/div&gt;
+&lt;div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 36, 81);"&gt;
+&lt;a href=3D"https://www.theknowledgeacademy.com/in/" id=3D"OWA71197cfc-178c-=
+8b42-f375-7f838da5b398" class=3D"OWAAutoLink" data-loopstyle=3D"linkonly" s=
+tyle=3D"color: rgb(0, 36, 81);"&gt;https://www.theknowledgeacademy.com/in/&lt;/a&gt;=
+&lt;/div&gt;
+&lt;div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;span style=3D"color: rgb(0, 36, 81);"&gt;&lt;a href=3D"https://www.linkedin.com/=
+in/pallavi-bachchhav-813239250/" id=3D"OWAe2a80637-6f9a-4ea0-3d28-ce952ed0d=
+7a7" class=3D"OWAAutoLink" data-loopstyle=3D"linkonly" style=3D"color: rgb(=
+0, 36, 81);"&gt;https://www.linkedin.com/in/pallavi-bachchhav-81323925&lt;/a&gt;&lt;/sp=
+an&gt;&lt;span style=3D"color: rgb(12, 100, 192);"&gt;&lt;a href=3D"https://www.linkedi=
+n.com/in/pallavi-bachchhav-813239250/" id=3D"OWAdc5d0d52-5a69-abdb-ac9d-7fc=
+d59d12bf2" class=3D"OWAAutoLink" data-loopstyle=3D"linkonly" style=3D"color=
+: rgb(12, 100, 192);"&gt;0/&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;img id=3D"imageSelected0" width=3D"277" height=3D"39" style=3D"width: 277p=
+x; height: 39px;" data-outlook-trace=3D"F:1|T:1" src=3D"cid:90b26162-5a18-4=
+5e3-acb7-b9ff985c2a35"&gt;&lt;/div&gt;
+&lt;div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div dir=3D"ltr" style=3D"mso-line-height-rule:exactly;-webkit-text-size-ad=
+just:100%;font-size:1px;direction:ltr;"&gt;&lt;table cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" style=3D"width:100%;border-collapse:collapse;font-size=
+:1px;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"vertical-alig=
+n:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bo=
+rder-collapse:collapse;font-size:0;color:#FFFFFF;font-style:normal;font-wei=
+ght:400;white-space:nowrap;"&gt;&lt;tr style=3D"font-size:14.67px;"&gt;&lt;td align=3D"=
+left" style=3D"padding:0;vertical-align:top;font-family:Calibri,Arial,sans-=
+serif;"&gt;&amp;nbsp;&lt;span style=3D"font-family:remialcxesans;font-size:1px;color:=
+#FFFFFF;line-height:1px;"&gt;&amp;#8203;&lt;span style=3D"font-family:&amp;#39;template-q=
+edGpx_eEe2ugwAVXY0b4g&amp;#39;;"&gt;&amp;#8203;&lt;/span&gt;&lt;span style=3D"font-family:&amp;#39;=
+zone-1&amp;#39;;"&gt;&amp;#8203;&lt;/span&gt;&lt;span style=3D"font-family:&amp;#39;zones-AQ&amp;#39;;"=
+&gt;&amp;#8203;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=3D"font-s=
+ize:0;"&gt;&lt;td align=3D"left" style=3D"vertical-align:top;"&gt;&lt;table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;fon=
+t-size:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"backgroun=
+d-color:#44318D;padding:0;vertical-align:top;"&gt;&lt;table cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;font-size:0;"=
+&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td colspan=3D"2" align=3D"left" style=3D"paddi=
+ng:30px 0 0;vertical-align:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" style=3D"border-collapse:collapse;font-size:0;line-height:nor=
+mal;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"padding:0 0 0 =
+30px;vertical-align:top;"&gt;&lt;img src=3D"cid:image668784.png@6925D480.CBD1C299=
+" width=3D"250" height=3D"27" border=3D"0" alt=3D"" style=3D"width:250px;mi=
+n-width:250px;max-width:250px;height:27px;min-height:27px;max-height:27px;f=
+ont-size:0;" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td c=
+olspan=3D"2" align=3D"left" style=3D"padding:0;vertical-align:top;"&gt;&lt;table =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%;border=
+-collapse:collapse;font-size:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"le=
+ft" style=3D"vertical-align:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" style=3D"border-collapse:collapse;font-size:0;"&gt;&lt;tr style=3D=
+"font-size:0;"&gt;&lt;td align=3D"left" style=3D"padding:0 30px 30px;vertical-ali=
+gn:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"b=
+order-collapse:collapse;font-size:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=
+=3D"left" style=3D"vertical-align:top;"&gt;&lt;table cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" style=3D"width:100%;border-collapse:collapse;font-size=
+:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"padding:0 30px =
+0 0;vertical-align:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"width:100%;border-collapse:collapse;font-size:0;"&gt;&lt;tr style=
+=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"vertical-align:top;"&gt;&lt;table c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%;border-=
+collapse:collapse;font-size:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"lef=
+t" style=3D"padding:16px 0 0;vertical-align:top;"&gt;&lt;table cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"width:100%;border-collapse:collapse=
+;font-size:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"verti=
+cal-align:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" sty=
+le=3D"width:100%;border-collapse:collapse;font-size:0;color:#FFFFFF;font-st=
+yle:normal;font-weight:700;white-space:nowrap;"&gt;&lt;tr style=3D"font-size:14.6=
+7px;"&gt;&lt;td align=3D"left" style=3D"vertical-align:top;font-family:Calibri,Ar=
+ial,sans-serif;"&gt;Pallavi&amp;nbsp;Bachchhav&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr styl=
+e=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"vertical-align:top;"&gt;&lt;table =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:c=
+ollapse;font-size:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=
+=3D"padding:15px 0 0;vertical-align:top;"&gt;&lt;table cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" style=3D"border-collapse:collapse;font-size:0;"&gt;&lt;tr =
+style=3D"font-size:0;line-height:normal;"&gt;&lt;td align=3D"left" style=3D"paddi=
+ng:0;vertical-align:top;"&gt;&lt;img src=3D"cid:image896012.png@C6A9C955.B5483437=
+" width=3D"16" height=3D"17" border=3D"0" alt=3D"" style=3D"width:16px;min-=
+width:16px;max-width:16px;height:17px;min-height:17px;max-height:17px;font-=
+size:0;" /&gt;&lt;/td&gt;&lt;td align=3D"left" style=3D"padding:0;vertical-align:top;"&gt;=
+&lt;table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-col=
+lapse:collapse;font-size:0;color:#FFFFFF;font-style:normal;font-weight:700;=
+white-space:nowrap;"&gt;&lt;tr style=3D"font-size:14.67px;"&gt;&lt;td align=3D"left" st=
+yle=3D"padding:0 0 0 8px;vertical-align:top;font-family:Calibri,Arial,sans-=
+serif;"&gt;&lt;a href=3D"mailto:Pallavi.Bachchhav@theknowledgeacademy.com" target=
+=3D"_blank" id=3D"LPlnk689713" style=3D"text-decoration:none;color:#FFFFFF;=
+"&gt;Pallavi.Bachchhav@theknowledgeacademy.com&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;=
+&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"padding:8px 0 0;vert=
+ical-align:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse;font-size:0;line-height:normal;"&gt;&lt;tr style=
+=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"padding:5px 0 0;vertical-alig=
+n:top;"&gt;&lt;img src=3D"cid:image298501.png@C9849A53.EC8914E0" width=3D"16" hei=
+ght=3D"17" border=3D"0" alt=3D"" style=3D"width:16px;min-width:16px;max-wid=
+th:16px;height:17px;min-height:17px;max-height:17px;font-size:0;" /&gt;&lt;/td&gt;&lt;/=
+tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td align=3D"left" style=3D"padding:8px 0 0;vertical-align:=
+top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse;font-size:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"=
+left" style=3D"padding:5px 0 0;vertical-align:top;"&gt;&lt;table cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;font-siz=
+e:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"vertical-align=
+:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bor=
+der-collapse:collapse;font-size:0;color:#FFFFFF;font-style:normal;font-weig=
+ht:700;white-space:nowrap;"&gt;&lt;tr style=3D"font-size:14.67px;"&gt;&lt;td align=3D"l=
+eft" style=3D"padding:0 0 0 8px;vertical-align:top;font-family:Calibri,Aria=
+l,sans-serif;"&gt;01344&amp;nbsp;203999&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/=
+tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D=
+"padding:0;vertical-align:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"border-collapse:collapse;font-size:0;line-height:norm=
+al;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"padding:10px 0 =
+0;vertical-align:top;"&gt;&lt;img src=3D"cid:image161509.png@1AE56C74.D8CB8B09" w=
+idth=3D"16" height=3D"17" border=3D"0" alt=3D"" style=3D"width:16px;min-wid=
+th:16px;max-width:16px;height:17px;min-height:17px;max-height:17px;font-siz=
+e:0;" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td align=3D"left" style=3D"padding:0;vertic=
+al-align:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse:collapse;font-size:0;color:#FFFFFF;font-style:normal;f=
+ont-weight:700;white-space:nowrap;"&gt;&lt;tr style=3D"font-size:14.67px;"&gt;&lt;td al=
+ign=3D"left" style=3D"padding:10px 0 0 8px;vertical-align:top;font-family:C=
+alibri,Arial,sans-serif;"&gt;&lt;a href=3D"https://www.theknowledgeacademy.com/" =
+target=3D"_blank" id=3D"LPlnk689713" style=3D"text-decoration:none;color:#F=
+FFFFF;"&gt;theknowledgeacademy.com&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td=
+&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=3D"fo=
+nt-size:0;"&gt;&lt;td align=3D"left" style=3D"vertical-align:top;"&gt;&lt;table cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse=
+;font-size:0;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"paddi=
+ng:12px 0 0;vertical-align:top;"&gt;&lt;table cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" style=3D"border-collapse:collapse;font-size:0;line-height:nor=
+mal;"&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td align=3D"left" style=3D"padding:0;vert=
+ical-align:top;"&gt;&lt;a href=3D"https://www.linkedin.com/company/the-knowledge-=
+academy" target=3D"_blank" id=3D"LPlnk689713" style=3D"text-decoration:none=
+;"&gt;&lt;img src=3D"cid:image665098.png@34C78001.45E4A80A" width=3D"130" height=
+=3D"33" border=3D"0" alt=3D"" style=3D"width:130px;min-width:130px;max-widt=
+h:130px;height:33px;min-height:33px;max-height:33px;font-size:0;" /&gt;&lt;/a&gt;&lt;/t=
+d&gt;&lt;td align=3D"left" style=3D"padding:0;vertical-align:middle;"&gt;&lt;table cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:colla=
+pse;font-size:0;color:#FFFFFF;font-style:normal;font-weight:400;white-space=
+:nowrap;"&gt;&lt;tr style=3D"font-size:14.67px;"&gt;&lt;td align=3D"left" style=3D"padd=
+ing:0 0 0 9px;vertical-align:middle;font-family:Calibri,Arial,sans-serif;"&gt;=
+&lt;span style=3D"text-decoration:underline;"&gt;L&lt;a href=3D"https://teams.micros=
+oft.com/l/chat/0/0?users=3DPallavi.Bachchhav%40theknowledgeacademy.com" tar=
+get=3D"_blank" id=3D"LPlnk689713" style=3D"text-decoration:underline;color:=
+#FFFFFF;"&gt;et&amp;#39;s&amp;nbsp;chat&amp;nbsp;on&amp;nbsp;Teams&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;=
+/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=3D"font-size:0;"&gt;&lt;td style=3D"padding:0;"&gt;&amp;nbsp;=
+&lt;/td&gt;&lt;td style=3D"padding:0;"&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/t=
+d&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;=
+/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=3D"font=
+-size:0;"&gt;&lt;td align=3D"left" style=3D"vertical-align:middle;"&gt;&lt;table cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collaps=
+e;font-size:0;color:#000001;font-style:normal;font-weight:400;white-space:n=
+owrap;"&gt;&lt;tr style=3D"font-size:11px;"&gt;&lt;td align=3D"left" style=3D"padding:0=
+ 0 0 130px;vertical-align:middle;font-family:Calibri,Arial,sans-serif;"&gt;&lt;sp=
+an style=3D"text-decoration:underline;"&gt;&lt;a href=3D"https://www.theknowledge=
+academy.com/update-marketing-preferences/" target=3D"_blank" id=3D"LPlnk689=
+713" style=3D"text-decoration:underline;color:#000001;"&gt;Update&amp;nbsp;contact=
+&amp;nbsp;preferences&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/bod=
+y&gt;
+&lt;/html&gt;
+
+--_000_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_--
+--_005_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: image/png; name="Outlook-yohsm5tx.png"
+Content-Description: Outlook-yohsm5tx.png
+Content-Disposition: inline; filename="Outlook-yohsm5tx.png"; size=317610; creation-date="Thu, 16 May 2024 10:11:05 GMT"; modification-date="Thu, 16 May 2024 10:11:05 GMT"
+Content-ID: &lt;90b26162-5a18-45e3-acb7-b9ff985c2a35&gt;
+Content-Transfer-Encoding: base64
+
+
+--_005_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: image/png; name="image668784.png"
+Content-Transfer-Encoding: base64
+Content-ID: &lt;image668784.png@6925D480.CBD1C299&gt;
+Content-Description: image668784.png
+Content-Disposition: inline; creation-date="Thu, 16 May 2024 10:11:09 +0000"; filename=image668784.png; modification-date="Thu, 16 May 2024 10:11:09 +0000"; size=2806
+
+
+--_005_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: image/png; name="image896012.png"
+Content-Transfer-Encoding: base64
+Content-ID: &lt;image896012.png@C6A9C955.B5483437&gt;
+Content-Description: image896012.png
+Content-Disposition: inline; creation-date="Thu, 16 May 2024 10:11:09 +0000"; filename=image896012.png; modification-date="Thu, 16 May 2024 10:11:09 +0000"; size=347
+
+
+--_005_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: image/png; name="image298501.png"
+Content-Transfer-Encoding: base64
+Content-ID: &lt;image298501.png@C9849A53.EC8914E0&gt;
+Content-Description: image298501.png
+Content-Disposition: inline; creation-date="Thu, 16 May 2024 10:11:09 +0000"; filename=image298501.png; modification-date="Thu, 16 May 2024 10:11:09 +0000"; size=302
+
+
+--_005_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: image/png; name="image161509.png"
+Content-Transfer-Encoding: base64
+Content-ID: &lt;image161509.png@1AE56C74.D8CB8B09&gt;
+Content-Description: image161509.png
+Content-Disposition: inline; creation-date="Thu, 16 May 2024 10:11:09 +0000"; filename=image161509.png; modification-date="Thu, 16 May 2024 10:11:09 +0000"; size=390
+
+
+--_005_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: image/png; name="image665098.png"
+Content-Transfer-Encoding: base64
+Content-ID: &lt;image665098.png@34C78001.45E4A80A&gt;
+Content-Description: image665098.png
+Content-Disposition: inline; creation-date="Thu, 16 May 2024 10:11:09 +0000"; filename=image665098.png; modification-date="Thu, 16 May 2024 10:11:09 +0000"; size=1765
+
+
+--_005_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_--
+--_006_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_
+Content-Type: application/pdf; name="Erdem Sahin NDA.pdf"
+Content-Description: Erdem Sahin NDA.pdf
+Content-Disposition: attachment; filename="Erdem Sahin NDA.pdf"; size=152093; creation-date="Thu, 16 May 2024 10:04:57 GMT"; modification-date="Thu, 16 May 2024 10:05:06 GMT"
+Content-Transfer-Encoding: base64
+
+
+--_006_DB9PR08MB98287F42CB6B58D4BC0ABF9DF5ED2DB9PR08MB9828eurp_--</pre></div></div></div><div id="debugDiv" style="position: fixed; top: 0px; left: 0px; z-index: 1000000; background-color: rgb(241, 241, 241); border: 1px solid rgb(0, 0, 0); max-height: 300px; overflow-y: scroll; padding: 10px; width: 300px; display: none;">line_width: 5<br>line_length: 300<br>line_color: #ff0000<br>gestureS: true<br>gestureR: true<br>gestureE: true<br>enabled: true<br>click_time: 1000<br>click_size: 40<br>click_color: #0000ff<br>line_width: 5<br>line_length: 300<br>line_color: #ff0000<br>gestureS: true<br>gestureR: true<br>gestureE: true<br>enabled: true<br>click_time: 1000<br>click_size: 40<br>click_color: #0000ff<br>line_width: 5<br>line_length: 300<br>line_color: #ff0000<br>gestureS: true<br>gestureR: true<br>gestureE: true<br>enabled: true<br>click_time: 1000<br>click_size: 40<br>click_color: #0000ff<br>Starting Mouse Laser Pointer v1.0...<br>Debug information:
+</div><div id="reviewPopupDiv" style="display: none; position: fixed; width: 350px; background: rgb(241, 241, 241); color: black; padding: 20px; text-align: center; border: 1px solid black; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px; left: 50%; top: 40%; transform: translate(-50%, -50%); z-index: 1000000;">
+    <img src="./Original message_files/icon48.png" alt="Extension Icon" style="width: 32px;height: 32px;">
+    <p style="font-weight: 800;margin: 0px;font-size: 22px;line-height: 1.2em;">We hope you like the <span style="text-decoration: underline;">AnyTab Laser Pointer</span> Chrome Extension...</p>
+    <p style="margin: 0px;margin-top: 20px;margin-bottom: 20px;font-size: 18px;line-height: 1.2em;">How likely would you be to recommend it?</p>
+    <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: nowrap; gap: 20px;">
+        <button style="background: #FF4B4B;cursor: pointer;border: 1px solid black;width: 40px !important;height: 40px !important;padding: 0px !important;border-radius: 0px !important;margin: 0px !important;" data-rating="1">1</button>
+        <button style="cursor: pointer;border: 1px solid black;background: #FF7A4B;width: 40px !important;height: 40px !important;padding: 0px !important;border-radius: 0px !important;margin: 0px !important;" data-rating="2">2</button>
+        <button style="background: #FFA34B;cursor: pointer;border: 1px solid black;width: 40px !important;height: 40px !important;padding: 0px !important;border-radius: 0px !important;margin: 0px !important;" data-rating="3">3</button>
+        <button style="background: #D1E231;cursor: pointer;border: 1px solid black;width: 40px !important;height: 40px !important;padding: 0px !important;border-radius: 0px !important;margin: 0px !important;" data-rating="4">4</button>
+        <button style="background: #4CAF50;cursor: pointer;border: 1px solid black;width: 40px !important;height: 40px !important;padding: 0px !important;border-radius: 0px !important;margin: 0px !important;" data-rating="5">5</button>
+    </div></div><div class="trail fading" style="width: 184.816px; transform: rotate(75.5878deg); position: absolute; left: 896px; top: 330px; box-shadow: rgb(255, 0, 0) 0px 0px 2px 0px;"></div><div class="trail fading" style="width: 4px; transform: rotate(-90deg); position: absolute; left: 942px; top: 509px; box-shadow: rgb(255, 0, 0) 0px 0px 2px 0px;"></div><div class="trail fading" style="width: 14px; transform: rotate(-90deg); position: absolute; left: 942px; top: 505px; box-shadow: rgb(255, 0, 0) 0px 0px 2px 0px;"></div><div class="trail fading" style="width: 39.3954px; transform: rotate(-113.962deg); position: absolute; left: 942px; top: 491px; box-shadow: rgb(255, 0, 0) 0px 0px 2px 0px;"></div></body><text-blaze-app-reference style="display: contents !important;"><template shadowrootmode="closed"><style>
+      div:before {
+        content: attr(data-content);
+      }
+      div {
+        all: initial;
+        position: absolute;
+        border: 0;
+        margin: -1px;
+        padding: 0;
+        width: 0.1px;
+        height: 0.1px;
+        user-select: none;
+        overflow: hidden;
+        font-size: 0px;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      @media print {
+        * {
+          display: none !important;
+        }
+      }
+      </style><div aria-label="text-blaze-integration" role="group" tabindex="-1" data-content="{&quot;extensionEnabled&quot;:true,&quot;text&quot;:true}" dir="ltr"></div></template></text-blaze-app-reference></html>

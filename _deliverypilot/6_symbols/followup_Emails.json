@@ -1,0 +1,101 @@
+{
+  "name": "followup Emails",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -580,
+        -60
+      ],
+      "id": "7f8f2f0c-6569-4127-9e45-31af75a7d472",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "get"
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -360,
+        -60
+      ],
+      "id": "6215e043-4f9f-4a0f-bda1-993c1045b58b",
+      "name": "Gmail",
+      "webhookId": "de2ee611-98a7-4163-ba9c-6b9b8323efc6",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "MFjsgnVsoeuysDi7",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "tuncer.karaarslan@gmail.com",
+        "subject": "Trainings arrived",
+        "message": "=",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -140,
+        -60
+      ],
+      "id": "e9c2cb1e-a44c-450d-80f6-f5a725113f9f",
+      "name": "Tuncer Notify",
+      "webhookId": "9fb57135-7ea9-48a4-a6a0-71142532efb3",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "MFjsgnVsoeuysDi7",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "main": [
+        [
+          {
+            "node": "Tuncer Notify",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e614d4b7-b690-4469-8ca4-a6234c42a1e4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "cb85579a79ac58a4f25be4abfecc3151ede09d2fad080789652454e269c498c2"
+  },
+  "id": "GCssstgCWHwQqITF",
+  "tags": []
+}

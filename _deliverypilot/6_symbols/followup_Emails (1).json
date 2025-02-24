@@ -1,0 +1,151 @@
+{
+  "name": "followup Emails",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -580,
+        -60
+      ],
+      "id": "7f8f2f0c-6569-4127-9e45-31af75a7d472",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "tuncer.karaarslan@gmail.com",
+        "subject": "Trainings arrived",
+        "message": "=new training email : ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        100,
+        -60
+      ],
+      "id": "e9c2cb1e-a44c-450d-80f6-f5a725113f9f",
+      "name": "Tuncer Notify",
+      "webhookId": "9fb57135-7ea9-48a4-a6a0-71142532efb3",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "MFjsgnVsoeuysDi7",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "filters": {
+          "labelIds": [
+            "Label_4716836601042464671"
+          ],
+          "sender": "Pallavi.Bachchhav@theknowledgeacademy.com"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -360,
+        -60
+      ],
+      "id": "2cb049d5-5aab-449c-bc53-c8d1fdbfe563",
+      "name": "labelled messages",
+      "webhookId": "f8b6ff59-8778-428a-896d-115b51433850",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "MFjsgnVsoeuysDi7",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "95db74a4-d035-420f-8064-4ac4f491a206",
+              "leftValue": "={{ $('Schedule Trigger').item.json.timestamp }}",
+              "rightValue": "2025-02-24T00:00:00",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -140,
+        -60
+      ],
+      "id": "3feae166-d258-48fb-a693-7a364e4109a1",
+      "name": "If"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "labelled messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "labelled messages": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Tuncer Notify",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5f56bf2c-d4d2-40d4-b18f-eda49ec8d1cf",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "cb85579a79ac58a4f25be4abfecc3151ede09d2fad080789652454e269c498c2"
+  },
+  "id": "GCssstgCWHwQqITF",
+  "tags": []
+}
